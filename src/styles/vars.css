@@ -1,0 +1,19 @@
+:root {
+    --navbar-bg-light: #F5F5F5;
+    --navbar-bg-dark: #171923;
+    --navbar-brand-light: #171923;
+    --navbar-brand-dark: #F7F9FC;
+    --navbar-darkmodeicon-light: #171923;
+    --navbar-darkmodeicon-dark: #F7F9FC;
+
+    --captcha-bg-light: #F7F9FC;
+    --captcha-bg-dark: #171923;
+
+    --form-bg-light: #F5F5F5;
+    --form-bg-dark: #4B4D54;
+
+    --form-input-bg-light: #F7F9FC;
+    --form-input-bg-dark: #595B62;
+    --form-input-text-light: #171923;
+    --form-input-text-dark: #F7F9FC;
+}

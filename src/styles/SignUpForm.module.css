@@ -1,18 +1,41 @@
-.formContainer {
+@import url('./vars.css');
+
+.formContainerLight {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: #F5F5F5;
+  background-color: var(--form-bg-light);
   border-radius: 5px;
 }
 
-.formInputElement {
+.formContainerDark {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--form-bg-dark);
+  border-radius: 5px;
+}
+
+.formInputElementLight {
   border: none;
   padding: 0.5rem;
   margin: 0.5rem 0;
   width: 50vw;
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
+  background-color: var(--form-input-bg-light);
+  color: var(--form-input-text-light);
+}
+
+.formInputElementDark {
+  border: none;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 50vw;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--form-input-bg-dark);
+  color: var(--form-input-text-dark);
 }
 
 .captchaBox {
@@ -30,7 +53,7 @@
 .signUpBtn {
   padding: 0.5rem;
   border-radius: 5px;
-  background-color: #1861BF;
+  background-color: #166BFF;
   border: none;
   color: #ffffff;
   font-weight: 500;

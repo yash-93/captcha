@@ -1,9 +1,51 @@
-.navContainer {
+@import url('./vars.css');
+
+.navContainerLight {
   width: 100vw;
   height: auto;
-  padding: 1rem;
-  background-color: #F5F5F5;
+  padding: 1rem 0;
+  background-color: var(--navbar-bg-light);
   font-weight: bold;
   font-size: 1.5rem;
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.navContainerDark {
+  width: 100vw;
+  height: auto;
+  padding: 1rem 0;
+  background-color: var(--navbar-bg-dark);
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.brandLight {
+  padding-left: 1rem;
+  color: var(--navbar-brand-light);
+}
+
+.brandDark {
+  padding-left: 1rem;
+  color: var(--navbar-brand-dark);
+}
+
+.darkModeIconLight {
+  padding-right: 1rem;
+  cursor: pointer;
+  color: var(--navbar-darkmodeicon-light);
+}
+
+.darkModeIconDark {
+  padding-right: 1rem;
+  cursor: pointer;
+  color: var(--navbar-darkmodeicon-dark);
 }
