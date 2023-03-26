@@ -38,5 +38,10 @@ export const checkFieldValidity = (values, generatedCaptcha) => {
 }
 
 export const generateCaptcha = () => {
-  return '12345';
+  let captcha = '';
+  const allowedChars = '0791328465qwertyuioplkjhgfdsazxcvbnmZAQWSXCDERFVBGTYHNMJUIKLOP';
+  for (let i = 0; i < 6; i++) {
+    captcha += allowedChars[Math.floor(Math.random() * allowedChars.length)];
+  }
+  return captcha;
 }
