@@ -1,0 +1,9 @@
+.captchaContainer {
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
