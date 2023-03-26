@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 
+import { ThemeContext } from '../context/ThemeContext';
 import { generateCaptcha, checkFieldValidity } from '../utils';
 import styles from '../styles/SignUpForm.module.css';
 
@@ -11,6 +12,7 @@ const initialValues = {
 }
 
 export default function SignUpForm() {
+  const themeContext = useContext(ThemeContext);
 
   const [values, setValues] = useState(initialValues);
   const [captcha, setCaptcha] = useState(null);
@@ -45,9 +47,9 @@ export default function SignUpForm() {
   }
 
   return (
-    <form className={styles.formContainer} onSubmit={handleSubmit} noValidate>
+    <form className={themeContext.isDarkMode ? styles.formContainerDark : styles.formContainerLight} onSubmit={handleSubmit} noValidate>
       <input
-        className={styles.formInputElement}
+        className={themeContext.isDarkMode ? styles.formInputElementDark : styles.formInputElementLight}
         type='text'
         placeholder='Username'
         value={values.username}
@@ -55,7 +57,7 @@ export default function SignUpForm() {
         onChange={handleChange}
       />
       <input
-        className={styles.formInputElement}
+        className={themeContext.isDarkMode ? styles.formInputElementDark : styles.formInputElementLight}
         type='email'
         placeholder='Email'
         value={values.email}
@@ -63,7 +65,7 @@ export default function SignUpForm() {
         onChange={handleChange}
       />
       <input
-        className={styles.formInputElement}
+        className={themeContext.isDarkMode ? styles.formInputElementDark : styles.formInputElementLight}
         type='password'
         placeholder='Password'
         value={values.password}
@@ -71,7 +73,13 @@ export default function SignUpForm() {
         onChange={handleChange}
       />
       <div className={styles.captchaBox}>
-        <div style={{ width: 'fitContent', backgroundColor: 'white', padding: '0.25rem 1rem' }}>
+        <div
+          style={{
+            width: 'fitContent',
+            backgroundColor: themeContext.isDarkMode ? '#595B62' : '#F7F9FC',
+            color: themeContext.isDarkMode ? '#F7F9FC' : '#595B62',
+            padding: '0.25rem 1rem'
+          }}>
           <label
             className={styles.captcha}
           >
@@ -80,7 +88,7 @@ export default function SignUpForm() {
         </div>
       </div>
       <input
-        className={styles.formInputElement}
+        className={themeContext.isDarkMode ? styles.formInputElementDark : styles.formInputElementLight}
         type='text'
         placeholder='Captcha'
         value={values.captcha}
